@@ -12,11 +12,11 @@ terraform {
       source  = "hashicorp/archive"
       version = "~> 2.2.0"
     }
-
-    required_version = "~> 1.0"
   }
 
-  provider "aws" {
-    region = "eu-west-2"
-  }
+  required_version = "~> 1.0"
+}
+
+provider "aws" {
+  region = "eu-west-2"
 }
