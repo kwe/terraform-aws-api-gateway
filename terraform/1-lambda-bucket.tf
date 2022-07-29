@@ -1,3 +1,4 @@
+
 resource "random_pet" "lambda_bucket_name" {
   prefix = "lambda"
   length = 2
@@ -8,8 +9,8 @@ resource "aws_s3_bucket" "lambda_bucket" {
   force_destroy = true
 }
 
-resource "aws_s3_bucket" "lambda_bucket" {
-  bucket = aws_s3_bucket.lamdba_bucket.id
+resource "aws_s3_bucket_public_access_block" "lambda_bucket" {
+  bucket = aws_s3_bucket.lambda_bucket.id
 
   block_public_acls       = true
   block_public_policy     = true
