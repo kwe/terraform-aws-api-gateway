@@ -25,7 +25,7 @@ resource "aws_lambda_function" "auth" {
   function_name = "auth-hello"
 
   s3_bucket = aws_s3_bucket.lambda_bucket.id
-  s3_key    = aws_s3_object.lambda_hello.key
+  s3_key    = aws_s3_object.lambda_auth.key
 
   runtime = "nodejs16.x"
   handler = "function.handler"

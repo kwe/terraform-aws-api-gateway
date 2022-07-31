@@ -22,6 +22,7 @@ resource "aws_apigatewayv2_stage" "dev" {
       routeKey                = "$context.routeKey"
       status                  = "$context.status"
       responseLength          = "$context.responseLength"
+      authorizerError         = "$context.authorizer.error "
       integrationErrorMessage = "$context.integrationErrorMessage"
       }
     )
